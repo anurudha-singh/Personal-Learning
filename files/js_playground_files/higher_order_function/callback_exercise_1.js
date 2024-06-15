@@ -20,7 +20,7 @@
 // }
 // console.log(sumArray(numbers))
 
-const countries = ['Finland', 'Sweden', 'Denmark', 'Norway', 'IceLand']
+// const countries = ['Finland', 'Sweden', 'Denmark', 'Norway', 'IceLand']
 const names = ['Asabeneh', 'Mathias', 'Elias', 'Brook']
 const numbers = [1, 2, 3, 4]
 const products = [
@@ -34,12 +34,12 @@ const products = [
 
 //for each 
 
-countries.forEach(element => console.log(element))
-const reduceExample=numbers.reduce((element1,element2)=>{
-return element1*element2
-}
-)
-console.log(`reduce Example :: ${reduceExample}`);
+// countries.forEach(element => console.log(element))
+// const reduceExample=numbers.reduce((element1,element2)=>{
+// return element1*element2
+// }
+// )
+// console.log(`reduce Example :: ${reduceExample}`);
 
 // const filterExample=products.filter((element)=>
 //      {element.product,element.price}
@@ -47,5 +47,11 @@ console.log(`reduce Example :: ${reduceExample}`);
 //     )
 const validProducts = products.filter(item => typeof item.price === 'number' && item.price !== '');
 
-console.log(validProducts);
+// console.log(validProducts);
     // console.log(`Filter Example :: ${filterExample}`);
+
+    const countries = [['Finland', 'Helsinki'], ['Sweden', 'Stockholm'], ['Norway', 'Oslo']]
+
+    for (const element of countries) {
+    console.log(element)
+    }
