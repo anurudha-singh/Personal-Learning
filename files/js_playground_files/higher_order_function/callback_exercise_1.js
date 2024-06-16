@@ -52,6 +52,44 @@ const validProducts = products.filter(item => typeof item.price === 'number' && 
 
     const countries = [['Finland', 'Helsinki'], ['Sweden', 'Stockholm'], ['Norway', 'Oslo']]
 
-    for (const element of countries) {
-    console.log(element)
-    }
+    // for (const element of countries) {
+    // console.log(element)
+    // }
+    //Callback
+// const doSomething = () => {
+//   setTimeout(() => {
+//     const skills = ['HTML', 'CSS', 'JS']
+//     callback('It did not go well', skills)
+//   }, 2000)
+// }
+
+// const callback = (err, result) => {
+//   if (err) {
+//     return console.log(err)
+//   }
+//   return console.log(result)
+// }
+
+// doSomething()
+//Network API call using promises
+const url = 'https://restcountries.com/v2/all'
+fetch(url)
+  .then(response => response.json())
+  .then(data => {
+    // console.log(data)
+  })
+  .catch(error => console.error(error))
+
+//Network API call using async and await
+
+const fetchData = async () => {
+  try {
+    const response = await fetch(url)
+    const countries = await response.json()
+    // console.log(countries)
+  } catch (err) {
+    console.error(err)
+  }
+}
+console.log('===== async and await')
+// fetchData()
